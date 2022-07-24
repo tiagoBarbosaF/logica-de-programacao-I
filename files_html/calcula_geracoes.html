@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<h1>Calcula gerações</h1>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function writeDocument(text) {
+        document.write(text);
+        pulaLinha();
+    }
+
+    function diferencaAnos(anoAtual, ano) {
+        return anoAtual - ano;
+    }
+
+    function calculaGeracoes(anoAtual, ano) {
+        return Math.round(diferencaAnos(anoAtual, ano) / 28);
+    }
+
+    writeDocument("Desde 1500 se passaram " + diferencaAnos(2022, 1500));
+    writeDocument("Quantidade de gerações desde 1500 foi de " + calculaGeracoes(2022, 1500));
+</script>

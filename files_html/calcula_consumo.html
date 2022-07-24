@@ -2,6 +2,10 @@
 <h1>Álcool ou Gasolina</h1>
 <br>
 <script>
+    function pulaLinha() {
+        document.write("<br>")
+    }
+
     let tanque = 40;
     let caminhaComGasolina = 480;
     let caminhoComAlcool = 300;
@@ -9,9 +13,9 @@
     let resultadoComAlcool = caminhoComAlcool / tanque;
 
     document.write("Tanque comporta: " + tanque);
-    document.write("<br>");
+    pulaLinha();
     document.write("Consumo com gasolina: " + resultadoComGasolina + " Km/L");
-    document.write("<br>");
+    pulaLinha();
     document.write("Consumo com álcool: " + resultadoComAlcool + " Km/L");
 
 </script>
