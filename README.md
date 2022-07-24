@@ -4,3 +4,5 @@
 
 - Começando a programar ✅
 - Comunicando-se com o usuário através de `JavaScript` ✅
+- Variáveis ✅
+- Functions ✅
