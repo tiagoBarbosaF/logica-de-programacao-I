@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<h1>Jogo adivinhação</h1>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function writeDocument(text) {
+        document.write(text);
+        pulaLinha();
+    }
+
+    function randomNumber(number){
+        return Math.round(Math.random() * number);
+    }
+
+    let number = parseInt(prompt("Qual a quantidade máxima de números quer sortear?"));
+    let sorteio = randomNumber(number);
+    console.log(sorteio);
+    let tentativa = parseInt(prompt("Digite um número entre 1 - " + number + " e tente adivinhar o número sorteado."));
+
+    if (tentativa === sorteio) {
+        writeDocument("<h3>Parabéns, você acertou! 🎉🎉</h3>");
+    } else {
+        writeDocument("<h3>Desculpas, você errou. O número sorteado é: " + sorteio + " 😨</h3>");
+    }
+</script>

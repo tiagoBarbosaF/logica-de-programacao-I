@@ -7,3 +7,4 @@
 - Variáveis ✅
 - Functions ✅
 - Prompt function ✅
+- If - else ✅

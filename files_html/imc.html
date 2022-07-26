@@ -22,4 +22,16 @@
     let imc = calculaImc(altura, peso);
 
     writeDocument(nome + ", seu IMC é de " + imc);
+
+    if (imc < 18.5) {
+        writeDocument("Você está abaixo do recomendado.");
+    }
+
+    if (imc > 35) {
+        writeDocument("Você está acima do recomendado.");
+    }
+
+    if (imc >= 18.5 && imc <= 35) {
+        writeDocument("Seu IMC está excelente.");
+    }
 </script>
