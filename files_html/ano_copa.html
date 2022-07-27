@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<h1>Ano copa</h1>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function writeDocument(text) {
+        document.write(text);
+        pulaLinha();
+    }
+
+    let anoLimite = parseInt(prompt("Até que ano gostaria de verificar se houve copa?"));
+    let anoCopa = 1930;
+
+    while(anoCopa <= anoLimite){
+        writeDocument("Teve copa no ano de "+ anoCopa);
+        anoCopa += 4;
+    }
+</script>

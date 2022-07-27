@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h1>Calcula IMC</h1>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function writeDocument(text) {
+        document.write(text);
+        pulaLinha();
+    }
+
+    let num = 1;
+    let num2 = 0;
+
+    while (num <= 10){
+        writeDocument("<h3>Tabuada de " + num + "</h3>");
+        while (num2 <= 10){
+            writeDocument(num + " * " + num2 + " = " + num * num2);
+            num2++;
+        }
+        num++;
+        num2 = 0;
+    }
+</script>

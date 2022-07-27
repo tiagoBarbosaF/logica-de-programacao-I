@@ -12,18 +12,32 @@
         pulaLinha();
     }
 
-    function randomNumber(number){
+    function randomNumber(number) {
         return Math.round(Math.random() * number);
     }
 
     let number = parseInt(prompt("Qual a quantidade máxima de números quer sortear?"));
+    let chances = parseInt(prompt("Quantas chances gostaria de ter?"));
+    let numInicio = 1;
     let sorteio = randomNumber(number);
     console.log(sorteio);
-    let tentativa = parseInt(prompt("Digite um número entre 1 - " + number + " e tente adivinhar o número sorteado."));
 
-    if (tentativa === sorteio) {
-        writeDocument("<h3>Parabéns, você acertou! 🎉🎉</h3>");
-    } else {
-        writeDocument("<h3>Desculpas, você errou. O número sorteado é: " + sorteio + " 😨</h3>");
+    while (numInicio <= chances) {
+        let tentativa = parseInt(prompt("Digite um número entre 1 - " + number + " e tente adivinhar o número sorteado."));
+        writeDocument("<h2>Tentativa " + numInicio + "</h2>");
+        if (tentativa === sorteio) {
+            writeDocument("<h3>Parabéns, você acertou! 🎉🎉</h3>");
+            break;
+        } else if (tentativa < sorteio) {
+            writeDocument("Você escolheu " + tentativa +
+                ". O número secreto é maior que o escolhido, tente novamente.");
+        } else if (tentativa > sorteio) {
+            writeDocument("Você escolheu " + tentativa +
+                ". O número secreto é menor que o escolhido, tente novamente.");
+        } else {
+            writeDocument("<h3>Desculpas, você errou. O número sorteado é: " + sorteio + " 😨</h3>");
+        }
+        numInicio++;
     }
+
 </script>

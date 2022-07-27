@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>Login</h1>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function writeDocument(text) {
+        document.write(text);
+        pulaLinha();
+    }
+
+    let loginSalvo = "root";
+    let senhaSalva = "passRoot";
+    let chances = 1;
+    while (chances <= 3) {
+        let loginInformado = prompt("Informe seu Login.");
+        let senhaInformada = prompt("Informe sua senha.");
+        if (loginSalvo === loginInformado && senhaSalva === senhaInformada) {
+            alert("Bem-vindo ao sistema.");
+            break;
+        }
+        alert("Login inválido, tente novamente. Tentativa " + chances);
+        chances++;
+    }
+</script>

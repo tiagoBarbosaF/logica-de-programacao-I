@@ -8,3 +8,5 @@
 - Functions ✅
 - Prompt function ✅
 - If - else ✅
+- While ✅
+- For each ✅

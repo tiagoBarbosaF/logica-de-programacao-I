@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>While test</h1>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function writeDocument(text) {
+        document.write(text);
+        pulaLinha();
+    }
+
+    let num = 1;
+    writeDocument("Imprimindo de 30 - 40, exceto 33 e 37");
+
+    let num2 = 30;
+    while (num2 <=40){
+        if (num2 === 33 || num2 === 37){
+            num2++;
+        }
+        writeDocument("Número: " + num2);
+        num2++;
+    }
+
+    writeDocument("<br><br>Ordem decrescente 20");
+    let num3 = 20;
+    while (num3 >= 0){
+        writeDocument("Número: " + num3);
+        --num3;
+    }
+    writeDocument("FIM");
+
+    writeDocument("<br><br>Imprimindo de 1 - 100");
+    while (num <=100){
+        writeDocument("Número " + num);
+        num++;
+    }
+
+    writeDocument("FIM");
+</script>
