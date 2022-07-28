@@ -10,3 +10,5 @@
 - If - else ✅
 - While ✅
 - For each ✅
+- Inputs ✅
+- Arrays ✅

@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+
+<h1>Jogo adivinhação</h1>
+
+<label>
+    <input type="text"/>
+</label>
+<button>Tente a sorte</button>
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function writeDocument(text) {
+        document.write(text);
+        pulaLinha();
+    }
+
+    function sorteia() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function sorteiaNumeros(quantidade) {
+        let segredos = [];
+        let numero = 1;
+
+        while (numero <= quantidade) {
+            let numeroAleatorio = sorteia();
+
+            if (numeroAleatorio != 0) {
+                let achou = false;
+                for (let i = 0; i < segredos.length; i++) {
+                    if (segredos[i] == numeroAleatorio) {
+                        achou = true;
+                        break;
+                    }
+                }
+
+                if (achou == false) {
+                    segredos.push(numeroAleatorio);
+                    numero++;
+                }
+            }
+        }
+        return segredos;
+    }
+
+    let segredos = sorteiaNumeros(5);
+    console.log(segredos);
+    let input = document.querySelector("input");
+    input.focus();
+
+    function valid() {
+        let achou = false;
+        for (let i = 0; i < segredos.length; i++) {
+            if (input.value == segredos[i]) {
+                alert("Você acertou 🎉🎉");
+                achou = true;
+            }
+        }
+        if (achou == false) {
+            alert("Você errou 😨😨😨");
+        }
+        input.value = "";
+        input.focus();
+    }
+
+    let button = document.querySelector("button");
+    button.onclick = valid;
+
+</script>
